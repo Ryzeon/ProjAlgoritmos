@@ -1,0 +1,24 @@
+### TODO
+
+- [ ] Crear estructura de datos minimo 20 entidades
+- [ ] Estructuras genericas
+- [ ] 2 uso de lambda en las estructuras genericas
+- [ ] Implementar listan enlazadas
+  - [ ] Implementar metodo propios #1
+  - [ ] Implementar metodo propios #2
+  - [ ] Implementar metodo propios #3
+- [ ] Implementar Hashtable
+  - [ ] Crear sus hash funtion #1
+  - [ ] Crear sus hash funtion #2
+  - [ ] Crear sus hash funtion #3
+- [ ] Implementar arboles binarios
+  - [ ] Implementar metodo propios #1
+  - [ ] Implementar metodo propios #2
+  - [ ] Implementar metodo propios #3
+- [ ] Implementar grafos
+  - [ ] Implementar metodo propios #1
+  - [ ] Implementar metodo propios #2
+  - [ ] Implementar metodo propios #3
+- [ ] Implementar generador de data set
+  - [ ] Importar CVS con 10^4 datos
+- [ ] Applicacion en consola -> Inovamos con GUI xd
