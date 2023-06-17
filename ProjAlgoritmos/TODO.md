@@ -1,8 +1,8 @@
 ### TODO
 
 - [ ] Crear estructura de datos minimo 20 entidades
-- [ ] Estructuras genericas
-- [ ] 2 uso de lambda en las estructuras genericas
+- [X] Estructuras genericas
+- [X] 2 uso de lambda en las estructuras genericas
 - [ ] Implementar listan enlazadas
   - [ ] Implementar metodo propios #1
   - [ ] Implementar metodo propios #2
