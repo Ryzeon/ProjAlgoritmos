@@ -4,6 +4,7 @@
 
 namespace utils {
     template<class T>
+
     class Queue {
     public:
         INode<T> *head;

@@ -57,7 +57,7 @@ namespace utils {
             size++;
         }
 
-        T remove(int index) {
+        T& remove(int index) {
             if (index < 0 || index >= size) {
                 throw "Index out of bounds";
             }
@@ -80,6 +80,30 @@ namespace utils {
             delete temp;
             size--;
             return data;
+        }
+
+        T& remove(T data) {
+            INode<T> *temp = head;
+            while (temp != nullptr) {
+                if (temp->data == data) {
+                    if (temp == head) {
+                        head = head->next;
+                        head->prev = nullptr;
+                    } else if (temp == tail) {
+                        tail = tail->prev;
+                        tail->next = nullptr;
+                    } else {
+                        temp->prev->next = temp->next;
+                        temp->next->prev = temp->prev;
+                    }
+                    T data = temp->data;
+                    delete temp;
+                    size--;
+                    return data;
+                }
+                temp = temp->next;
+            }
+            throw "Not found";
         }
 
         T get(int index) {
