@@ -121,6 +121,7 @@
   <ItemGroup>
     <ClCompile Include="Credits.cpp" />
     <ClCompile Include="Instructions.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Start.cpp" />
   </ItemGroup>
   <ItemGroup>

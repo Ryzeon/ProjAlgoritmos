@@ -1,12 +1,13 @@
 ### TODO
 
-- [ ] Crear estructura de datos minimo 20 entidades
+- [ ] Crear estructura de datos minimo 20 entidades 
+  - 7/20
 - [X] Estructuras genericas
 - [X] 2 uso de lambda en las estructuras genericas
-- [ ] Implementar listan enlazadas
-  - [ ] Implementar metodo propios #1
-  - [ ] Implementar metodo propios #2
-  - [ ] Implementar metodo propios #3
+- [X] Implementar listan enlazadas
+  - [X] Implementar metodo propios #1 [search -> return List of T]
+  - [X] Implementar metodo propios #2 [find_first -> return first T from a predicate expression]
+  - [X] Implementar metodo propios #3 [remove_if -> remove all T from a predicate expression]
 - [ ] Implementar Hashtable
   - [ ] Crear sus hash funtion #1
   - [ ] Crear sus hash funtion #2

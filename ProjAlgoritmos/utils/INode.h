@@ -1,6 +1,5 @@
 #pragma once
 
-
 namespace utils {
 
     template<class T>
