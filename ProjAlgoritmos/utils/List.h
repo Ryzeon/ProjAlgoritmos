@@ -156,6 +156,30 @@ namespace utils {
             return list.get(0);
         }
 
+        void remove_if(function<bool(T)> predicate) {
+            INode<T> *temp = head;
+            while (temp != nullptr) {
+                if (predicate(temp->data)) {
+                    if (temp == head) {
+                        head = head->next;
+                        head->prev = nullptr;
+                    } else if (temp == tail) {
+                        tail = tail->prev;
+                        tail->next = nullptr;
+                    } else {
+                        temp->prev->next = temp->next;
+                        temp->next->prev = temp->prev;
+                    }
+                    INode<T> *aux = temp;
+                    temp = temp->next;
+                    delete aux;
+                    size--;
+                } else {
+                    temp = temp->next;
+                }
+            }
+        }
+
         explicit operator T *() {
             T *array = new T[size];
             INode<T> *temp = head;
