@@ -11,7 +11,6 @@ add_executable(ProjAlgoritmos
         ProjAlgoritmos/controller/ControllerBinder.h
         ProjAlgoritmos/controller/IController.h
         ProjAlgoritmos/utils/INode.h
-        ProjAlgoritmos/utils/Iterable.h
         ProjAlgoritmos/utils/List.h
         ProjAlgoritmos/utils/Queue.h
         ProjAlgoritmos/utils/Stack.h
@@ -23,4 +22,4 @@ add_executable(ProjAlgoritmos
         ProjAlgoritmos/Instructions.cpp
         ProjAlgoritmos/Instructions.h
         ProjAlgoritmos/Start.cpp
-        ProjAlgoritmos/Start.h)
+        ProjAlgoritmos/Start.h ProjAlgoritmos/main.cpp)
