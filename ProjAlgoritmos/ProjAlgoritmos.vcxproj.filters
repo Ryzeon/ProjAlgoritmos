@@ -74,5 +74,8 @@
     <ClInclude Include="model\Driver.h">
       <Filter>Archivos de encabezado\model</Filter>
     </ClInclude>
+    <ClInclude Include="model\Client.h">
+      <Filter>Archivos de encabezado\model</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
