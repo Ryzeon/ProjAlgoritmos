@@ -19,6 +19,9 @@
     <Filter Include="Archivos de encabezado\utils">
       <UniqueIdentifier>{5c28056c-ea12-4a90-b1d3-186c6ea9ad1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\model">
+      <UniqueIdentifier>{d2c1c17c-1fce-4719-97eb-c14b336440fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Start.cpp">
@@ -67,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="utils\Stack.h">
       <Filter>Archivos de encabezado\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="model\Driver.h">
+      <Filter>Archivos de encabezado\model</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

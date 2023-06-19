@@ -136,6 +136,7 @@
     <ClInclude Include="Instructions.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="model\Driver.h" />
     <ClInclude Include="Start.h">
       <FileType>CppForm</FileType>
     </ClInclude>
