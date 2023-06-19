@@ -22,4 +22,4 @@ add_executable(ProjAlgoritmos
         ProjAlgoritmos/Instructions.cpp
         ProjAlgoritmos/Instructions.h
         ProjAlgoritmos/Start.cpp
-        ProjAlgoritmos/Start.h ProjAlgoritmos/main.cpp)
+        ProjAlgoritmos/Start.h ProjAlgoritmos/main.cpp ProjAlgoritmos/model/Client.h ProjAlgoritmos/model/Driver.h ProjAlgoritmos/utils/BinaryTree.h)
