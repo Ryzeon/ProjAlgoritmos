@@ -6,18 +6,19 @@ template<class K> <class V>
 class HashEntidad 
 {
 private:
-	int key, value;
+	K key; 
+	V value;
 public:
-	HashEntidad(int key, int value) 
+	HashEntidad(K key, V value) 
 	{
 		this->key = key;
 		this->value = value;
 	}
-	int getKey() 
+	K getKey() 
 	{
 		return key;
 	}
-	int getValue()
+	V getValue()
 	{
 		return value;
 	}
@@ -29,12 +30,20 @@ private:
 	int num_element;
 	int size;
 
-	int hashFunction(int key)
+	int hashFunction(K key)
 	{
 		return key % size;
 	}
 
-	// char -> obtener valores ascii
+	char hashFunction_2(const V& value) 
+	{
+		int hash = 0;
+		for (char c : value) 
+		{
+			hash += static_cast<int>(c);
+		}
+		return hash;
+	}
 
 	// string -> recorrer los char y obtner los volores ascii
 
