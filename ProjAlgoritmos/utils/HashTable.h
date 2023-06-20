@@ -1,5 +1,8 @@
 #pragma once
 #include "List.h"
+template<class K> <class V>
+// K -> Generico
+// V -> Genericos
 class HashEntidad 
 {
 private:
@@ -30,6 +33,10 @@ private:
 	{
 		return key % size;
 	}
+
+	// char -> obtener valores ascii
+
+	// string -> recorrer los char y obtner los volores ascii
 
 public:
 	HashTable(int size = 200) 

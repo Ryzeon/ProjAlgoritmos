@@ -23,3 +23,5 @@
 - [ ] Implementar generador de data set
   - [ ] Importar CVS con 10^4 datos
 - [ ] Applicacion en consola -> Inovamos con GUI xd
+- [ ] Add driver review -> user to driver 
+  - [ ] UserReview [clientID, driverID, reviews, star, date]
