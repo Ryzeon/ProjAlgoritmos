@@ -103,13 +103,4 @@ public:
 			i = (base + step) % size;
 		}
 	}
-	// method #2
-	int find_first(function<bool(int)>predicate)
-	{
-		
-	}
-	//method #3
-	int remove_if(function<bool(int)>predicate) {
-
-	}
 };
