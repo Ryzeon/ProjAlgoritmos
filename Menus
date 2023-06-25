@@ -131,3 +131,11 @@ void historialdeVaije()
 	menuMetodoPago();
 	menuCalificacion();
 }
+void PrintCredtisProject() 
+{
+	cout << "*****PROJECT PARTICIPANTS*****" << endl;
+	cout << "1. Alex Ramon Alberto Avila Asto" << endl;
+	cout << "2. Pedro Andre Guia Carrasco" << endl;
+	cout << "3. Augusto Jose Pin Matallana" << endl;
+	cout << "4. Brayan Stiven Gamboa Delgado" << endl;
+}
