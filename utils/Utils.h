@@ -5,6 +5,7 @@
 #include "List.h"
 #include "Queue.h"
 #include "Stack.h"
+#include "BinaryTree.h"
 
 using namespace std;
 using namespace utils;
