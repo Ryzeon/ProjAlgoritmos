@@ -14,7 +14,9 @@ int main() {
     ControllerBinder::getInstance().addController(new MenusController());
     ControllerBinder::getInstance().init();
 
-    MenusController *menu = ControllerBinder::getInstance().getController("menu");
-
+    MenusController menu = ControllerBinder::getInstance().getController("menu");
+    while (!menu.end) {
+        menu.tick();
+    }
     return 0;
 }

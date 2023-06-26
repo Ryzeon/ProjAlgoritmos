@@ -5,9 +5,21 @@
 class MenusController : public IController {
 public:
     bool end = false;
+
     void tick() {
         if (end) return;
+        switch (currentMenu) {
+            case 1:
+                break;
+            case 2:
+                break;
+        }
     }
+
+    int askForInt(string questin, int min,int max) {
+        
+    }
+
     int currentMenu;
 
     void load() override {
@@ -24,8 +36,8 @@ public:
         cout << "2. Credits" << endl;
         cout << "3. Exit" << endl;
     }
-    void menuRegistro()
-    {
+
+    void menuRegistro() {
         int nombres, apellidos;
         string dni, email;
         string telefono;
@@ -45,8 +57,8 @@ public:
         cin >> telefono;
         cout << endl;
     }
-    void menuIniciarSesion()
-    {
+
+    void menuIniciarSesion() {
         int correo;
         string contraseña;
         cout << "Correo: ";
@@ -55,8 +67,8 @@ public:
         cout << "Contraseña: ";
         cin >> contraseña;
     }
-    void menuSolicitudViaje()
-    {
+
+    void menuSolicitudViaje() {
         string o, d;
         cout << "Ingrese su punto de origen: ";
         cin >> o;
@@ -65,15 +77,15 @@ public:
         cin >> d;
         cout << endl;
     }
-    void menuVehiculo()
-    {
+
+    void menuVehiculo() {
         string vehi;
         cout << "Ingrese el vehiculo que desea viajar: ";
         cin >> vehi;
         cout << "Eleccion confirmada.";
     }
-    void menuMetodoPago()
-    {
+
+    void menuMetodoPago() {
         int op;
         cout << "****Metodo de Pago****" << endl;
         cout << "1. Efectivo" << endl;
@@ -84,8 +96,7 @@ public:
         cin >> op;
         cout << endl;
         while (true) {
-            switch (op)
-            {
+            switch (op) {
                 case 1:
                     cout << "Pago de tarifa en efectivo.";
                     cout << endl;
@@ -105,8 +116,8 @@ public:
             }
         }
     }
-    void menuCalificacion()
-    {
+
+    void menuCalificacion() {
         int cali;
         cout << "║CALIFICACION DEL VIAJE║" << endl;
         cout << "1. Muy Satisfecho" << endl;
@@ -116,10 +127,8 @@ public:
         cout << "5. Demasiado Insatisfecho" << endl;
         cout << "Opcion => ";
         cin >> cali;
-        while (true)
-        {
-            switch (cali)
-            {
+        while (true) {
+            switch (cali) {
                 case 1:
                     cout << "Excelente!!";
                     break;
@@ -139,14 +148,14 @@ public:
 
         }
     }
-    void historialdeVaije()
-    {
+
+    void historialdeVaije() {
         menuSolicitudViaje();
         menuMetodoPago();
         menuCalificacion();
     }
-    void PrintCredtisProject()
-    {
+
+    void PrintCredtisProject() {
         cout << "*****PROJECT PARTICIPANTS*****" << endl;
         cout << "1. Alex Ramon Alberto Avila Asto" << endl;
         cout << "2. Pedro Andre Guia Carrasco" << endl;
