@@ -16,6 +16,15 @@ namespace utils {
             file.close();
         }
 
+        static void write_lines(string path, vector<string> lines) {
+            ofstream file;
+            file.open(path);
+            for (string s : lines) {
+                file << s << endl;
+            }
+            file.close();
+        }
+
         static vector<string> read(string path) {
             ifstream file;
             vector<string> content;

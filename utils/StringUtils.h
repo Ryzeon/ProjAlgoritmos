@@ -30,6 +30,7 @@ namespace utils {
                     temp += c;
                 }
             }
+            result.push_back(temp);
             return result;
         }
     };

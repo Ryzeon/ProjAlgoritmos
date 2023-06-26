@@ -14,8 +14,8 @@ int main() {
     ControllerBinder::getInstance().addController(new DriverController());
     ControllerBinder::getInstance().addController(menu);
     ControllerBinder::getInstance().init();
-    while (!menu->end) {
-        menu->tick();
-    }
+//    while (!menu->end) {
+//        menu->tick();
+//    }
     return 0;
 }
