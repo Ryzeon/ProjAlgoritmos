@@ -2,44 +2,10 @@
 
 #include <iostream>
 #include <utility>
+#include "../utils/Utils.h"
 
 using namespace std;
-
-namespace drive_now_models {
-
-    class UserInfo {
-    public:
-        string mail, phone;
-        string pwd;
-
-        UserInfo(string mail, string phone, string pwd) {
-            this->mail = std::move(mail);
-            this->phone = std::move(phone);
-            this->pwd = std::move(pwd);
-        }
-    };
-
-    class Client {
-    public:
-        string name;
-        string lastname;
-        UserInfo *info;
-
-        Client(const string& name, const string& lastname, UserInfo* info) {
-            this->name = name;
-            this->lastname = lastname;
-            this->info = info;
-
-        }
-
-    };
-}
-#pragma once
-
-#include <iostream>
-#include <utility>
-
-using namespace std;
+using namespace utils;
 
 namespace drive_now_models {
 
@@ -86,15 +52,8 @@ Client() {
 }
 
     Client(string name, string lastname, string mail, string phone, string pwd) {
-        string random_id = "";
-        for (int i = 0; i < 10; i++) {
-            if (rand() % 2 == 0) {
-                random_id += char(rand() % 26 + 65);
-            } else {
-                random_id += char(rand() % 26 + 97);
-            }
-        }
-        this->id = random_id;
+
+        this->id = StringUtils::generateID();
 
         this->name = std::move(name);
         this->lastname = std::move(lastname);
