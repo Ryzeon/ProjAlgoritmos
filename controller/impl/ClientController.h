@@ -13,6 +13,8 @@ public:
     List<string> lastnames;
     List<Client*> clients;
 
+    Client* activeLogin;
+
     void load() override {
         loadFromFile();
         vector<string> lines = FileUtils::read("../clients.dat");
@@ -57,6 +59,11 @@ public:
             names.add(splitted[0]);
             lastnames.add(splitted[1]);
         }
+    }
+
+    Client* getRandomClient() {
+        int index = rand() % clients.getSize();
+        return clients.get(index);
     }
 
     string getName() override {

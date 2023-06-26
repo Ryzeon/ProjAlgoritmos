@@ -56,6 +56,19 @@ public:
         }
     }
 
+    Driver* getRandomDriver() {
+        int index = rand() % drivers.getSize();
+        return drivers.get(index);
+    }
+
+    Queue<Driver*> getRandomDrivers(int max) {
+        Queue<Driver*> randomDrivers;
+        for (int i = 0; i < max; i++) {
+            randomDrivers.enqueue(getRandomDriver());
+        }
+        return randomDrivers;
+    }
+
     string getName() override {
         return "driver";
     }
