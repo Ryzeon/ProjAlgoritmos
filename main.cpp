@@ -8,15 +8,14 @@ using namespace std;
 
 int main() {
     srand(time(NULL));
+    MenusController* menu = new MenusController();
     ControllerBinder::getInstance().addController(new DriverNowController());
     ControllerBinder::getInstance().addController(new ClientController());
     ControllerBinder::getInstance().addController(new DriverController());
-    ControllerBinder::getInstance().addController(new MenusController());
+    ControllerBinder::getInstance().addController(menu);
     ControllerBinder::getInstance().init();
-
-    MenusController menu = ControllerBinder::getInstance().getController("menu");
-    while (!menu.end) {
-        menu.tick();
+    while (!menu->end) {
+        menu->tick();
     }
     return 0;
 }

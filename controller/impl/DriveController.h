@@ -10,6 +10,15 @@ public:
         loadFromFile();
     }
 
+    bool existsDriverData() {
+        fstream drivers_data("../drivers.dat");
+        return drivers_data.is_open();
+    }
+
+    void createDriversData(int max) {
+
+    }
+
     void loadFromFile() {
         vector<string> lines = FileUtils::read("../cars.dat");
         for (string a: lines) {

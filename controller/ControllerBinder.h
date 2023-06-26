@@ -34,12 +34,12 @@ public:
     }
 
 
-    MenusController getController(string name) {
+    IController* getController(string name) {
         for (int i = 0; i < controllers->getSize(); i++) {
             if (controllers->get(i)->getName() == name) {
-                return *controllers->get(i);
+                return controllers->get(i);
             }
         }
-        throw "Controller not found";
+        return nullptr;
     }
 };

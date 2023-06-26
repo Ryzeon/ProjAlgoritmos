@@ -6,22 +6,33 @@ class MenusController : public IController {
 public:
     bool end = false;
 
+    void customGetch(string question) {
+        cout << question;
+        cin.ignore();
+        cin.get();
+    }
+
+    void clearConsole() {
+        system("cls");
+    }
+
     void tick() {
         if (end) return;
         switch (currentMenu) {
             case 1:
+                mainMenu();
                 break;
             case 2:
                 break;
         }
     }
 
-    int askForInt(string question, int min,int max) {
+    int askForInt(string question, int min, int max) {
         int out;
         do {
-            cin >> question;
+            cout << question;
             cin >> out;
-        } while(!(out >= min && out <= max));
+        } while (!(out >= min && out <= max));
         return out;
     }
 
@@ -40,6 +51,17 @@ public:
         cout << "1. Login Driver" << endl;
         cout << "2. Credits" << endl;
         cout << "3. Exit" << endl;
+
+        int option = askForInt("Option: ", 1, 3);
+        if (option == 1) {
+            currentMenu = 2;
+        } else if (option == 2) {
+            PrintCreditssProject();
+            customGetch("Pulsa una tecla!!");
+            clearConsole();
+        } else if (option == 3) {
+            end = true;
+        }
     }
 
     void menuRegistro() {
@@ -160,7 +182,7 @@ public:
         menuCalificacion();
     }
 
-    void PrintCredtisProject() {
+    void PrintCreditssProject() {
         cout << "*****PROJECT PARTICIPANTS*****" << endl;
         cout << "1. Alex Ramon Alberto Avila Asto" << endl;
         cout << "2. Pedro Andre Guia Carrasco" << endl;
