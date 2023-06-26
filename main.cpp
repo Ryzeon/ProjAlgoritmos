@@ -3,6 +3,7 @@
 #include "controller/impl/ClientController.h"
 #include "controller/impl/DriveController.h"
 #include "controller/impl/MenusController.h"
+
 using namespace std;
 
 int main() {
@@ -13,8 +14,7 @@ int main() {
     ControllerBinder::getInstance().addController(new MenusController());
     ControllerBinder::getInstance().init();
 
-    try {
-        MenusController *menu = ControllerBinder::getInstance().getController("menu");
-    }
+    MenusController *menu = ControllerBinder::getInstance().getController("menu");
+
     return 0;
 }
