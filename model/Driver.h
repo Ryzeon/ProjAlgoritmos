@@ -74,7 +74,7 @@ namespace drive_now_models {
 
 	class Driver: public Client {
 	public:
-		CarInfo* car_info;        
+		CarInfo* car_info;
 
         static Driver* generateRandom(vector<string> names, vector<string> lastname, vector<string> models) {
             Driver* driver = new Driver();
@@ -157,6 +157,12 @@ namespace drive_now_models {
             }
             return driver;
         }
+
+        class ServiceLocation {
+        public:
+            string serviceId;
+
+        };
 };
 
 

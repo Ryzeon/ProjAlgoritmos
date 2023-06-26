@@ -17,5 +17,20 @@ namespace utils {
                 }
             }
         };
+
+        static vector <string> split(string input, char delimiter) {
+            vector < string > result;
+            int index = 0;
+            string temp;
+            for (char c: input) {
+                if (c == delimiter) {
+                    result.push_back(temp);
+                    temp = "";
+                } else {
+                    temp += c;
+                }
+            }
+            return result;
+        }
     };
 }

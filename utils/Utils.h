@@ -7,6 +7,7 @@
 #include "Stack.h"
 #include "BinaryTree.h"
 #include "StringUtils.h"
+#include "FileUtils.h"
 
 using namespace std;
 using namespace utils;

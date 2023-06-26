@@ -1,5 +1,5 @@
 #pragma once
-#include "../utils/Utils.h"
+
 #include "IController.h"
 
 using namespace utils;
@@ -7,18 +7,18 @@ using namespace utils;
 class ControllerBinder {
 
 private:
-    static ControllerBinder *instance;
+
 
     List<IController*> *controllers;
 
+
+public:
     ControllerBinder() {
         controllers = new List<IController*>();
     }
-public:
-    static ControllerBinder *getInstance() {
-        if (instance == nullptr) {
-            instance = new ControllerBinder();
-        }
+
+    static ControllerBinder& getInstance() {
+        static ControllerBinder instance;
         return instance;
     }
 
