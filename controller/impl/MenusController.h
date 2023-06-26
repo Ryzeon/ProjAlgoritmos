@@ -16,8 +16,13 @@ public:
         }
     }
 
-    int askForInt(string questin, int min,int max) {
-        
+    int askForInt(string question, int min,int max) {
+        int out;
+        do {
+            cin >> question;
+            cin >> out;
+        } while(!(out >= min && out <= max));
+        return out;
     }
 
     int currentMenu;
