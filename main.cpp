@@ -18,8 +18,8 @@ int main() {
     ControllerBinder::getInstance().addController(new ReviewController);
     ControllerBinder::getInstance().addController(new LoginController);
     ControllerBinder::getInstance().init();
-//    while (!menu->end) {
-//        menu->tick();
-//    }
+    while (!menu->end) {
+        menu->tick();
+    }
     return 0;
 }

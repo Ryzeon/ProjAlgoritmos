@@ -1,6 +1,16 @@
 #pragma once
 
 #include "../IController.h"
+#include "../impl/ClientController.h"
+#include "../ControllerBinder.h"
+#include "../impl/DriveController.h"
+#include "../../model/Driver.h"
+#include "../../model/Client.h"
+#include "../../model/UserReview.h"
+
+using namespace drive_now_models;
+using namespace utils;
+
 
 class MenusController : public IController {
 public:
@@ -23,6 +33,11 @@ public:
                 mainMenu();
                 break;
             case 2:
+                loginMenu();
+                break;
+            case 3:
+                break;
+            case 4:
                 break;
         }
     }
@@ -48,7 +63,7 @@ public:
     }
 
     void mainMenu() {
-        cout << "1. Login Driver" << endl;
+        cout << "1. Login" << endl;
         cout << "2. Credits" << endl;
         cout << "3. Exit" << endl;
 
@@ -61,6 +76,39 @@ public:
             clearConsole();
         } else if (option == 3) {
             end = true;
+        }
+    }
+
+    void loginMenu() {
+        ClientController* controller = (ClientController*) ControllerBinder::getInstance().getController("client");
+        system("cls");
+        cout << "1. Login" << endl;
+        cout << "2. Register" << endl;
+        cout << "3. Login as driver" << endl;
+        cout << "4. Register as driver" << endl;
+
+        int option = askForInt("Option: ", 1, 4);
+        switch(option) {
+            case 1:{
+                cout << "Ingrese el nombre de usuario: " << endl;
+                cin.ignore();
+                string username;
+                getline(cin, username);
+                cout << "Ingrese la contraseña: " << endl;
+                string password;
+                getline(cin, password);
+
+                break;
+            }
+            case 2: {
+                break;
+            }
+            case 3: {
+                break;
+            }
+            case 4: {
+                break;
+            }
         }
     }
 
@@ -146,7 +194,6 @@ public:
 
     void historialdeVaije() {
         menuSolicitudViaje();
-        menuMetodoPago();
         menuCalificacion();
     }
 
