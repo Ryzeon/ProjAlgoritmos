@@ -112,38 +112,6 @@ public:
         cout << "Eleccion confirmada.";
     }
 
-    void menuMetodoPago() {
-        int op;
-        cout << "****Metodo de Pago****" << endl;
-        cout << "1. Efectivo" << endl;
-        cout << "2. Tarjeta de Credito Online" << endl;
-        cout << "3. Yape" << endl;
-        cout << "4. Plin" << endl;
-        cout << "Opcion => ";
-        cin >> op;
-        cout << endl;
-        while (true) {
-            switch (op) {
-                case 1:
-                    cout << "Pago de tarifa en efectivo.";
-                    cout << endl;
-                    break;
-                case 2:
-                    cout << "Pago de tarifa por tarjeta de credito online.";
-                    cout << endl;
-                    break;
-                case 3:
-                    cout << "Pago de tarifa por Yape.";
-                    cout << endl;
-                    break;
-                case 4:
-                    cout << "Pago de tarifa por Plin.";
-                    cout << endl;
-                    break;
-            }
-        }
-    }
-
     void menuCalificacion() {
         int cali;
         cout << "║CALIFICACION DEL VIAJE║" << endl;

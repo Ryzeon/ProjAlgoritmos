@@ -156,6 +156,16 @@ namespace utils {
             return list.get(0);
         }
 
+        List<T> clone() {
+            List<T> list;
+            INode<T> *temp = head;
+            while (temp != nullptr) {
+                list.add(temp->data);
+                temp = temp->next;
+            }
+            return list;
+        }
+
         void remove_if(function<bool(T)> predicate) {
             INode<T> *temp = head;
             while (temp != nullptr) {
